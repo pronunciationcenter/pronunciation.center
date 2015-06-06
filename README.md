@@ -1,2 +1,2 @@
 # pronunciation.center
-pronunciation.center is platform that intend to gather material about English pronunciation.
+http://pronunciation.center is platform that intend to gather material about English pronunciation.
