@@ -1,11 +1,11 @@
 <?php
-require_once ('./dao/connection.php');
-require_once ('./menu.php');
+require_once ('dao/connection.php');
+require_once ('menu.php');
 ?>
 
 <!doctype html>
 <html lang="en">
-<?php include "header.html";?>
+<?php include "header.php";?>
 <body>
 	<?php include_once("analyticstracking.php") ?>
 	<!-- Header -->
@@ -19,13 +19,12 @@ require_once ('./menu.php');
 	<!-- Main -->
 	<div class="wrapper container">
 		<main class="">
-			<?php  if (isset($_GET['id'])){ ?> <!--If id is not setted-->			
+			<?php  if (isset($id)){ ?> <!--If id is setted-->			
 			<article>
 				<header>
 					<?php
 					echo "<h1>";
-					echo "<a href='ipa.php'>IPA</a> > ";
-					$id = $_GET['id'];
+					echo "<a href='ipa'>IPA</a> > ";
 					$connection = new connection();
 					$mysqli = $connection->getConnection();
 
@@ -44,7 +43,7 @@ require_once ('./menu.php');
 
 						/* fetch values */
 						if ($stmt->fetch()) {
-							echo "<a href='ipa.php?id=$id'>[ $letter ]</a>";
+							echo "<a href='ipa/id=$id'>[ $letter ]</a>";
 							echo "</h1>";
 							echo "<div class='container'>";
 							echo "<h2>Examples: $examples</h2>";
@@ -133,8 +132,8 @@ require_once ('./menu.php');
 							/* fetch values */
 							while ($stmt->fetch()) {
 								echo "<tr>"; 
-								echo "<td><a href='ipa.php?id=$id'>[ $letter ]</a></td> "; 
-								echo "<td><a href='ipa.php?id=$id'>$examples</a></td>";
+								echo "<td><a href='ipa/$id'>[ $letter ]</a></td> "; 
+								echo "<td><a href='ipa/$id'>$examples</a></td>";
 								echo "</tr>";
 							}
 						}
@@ -166,8 +165,8 @@ require_once ('./menu.php');
 							/* fetch values */
 							while ($stmt->fetch()) {
 								echo "<tr>";
-								echo "<td><a href='ipa.php?id=$id'>[ $letter ]</a></td> "; 
-								echo "<td><a href='ipa.php?id=$id'>$examples</a></td>";
+								echo "<td><a href='ipa/$id'>[ $letter ]</a></td> "; 
+								echo "<td><a href='ipa/$id'>$examples</a></td>";
 								echo "</tr>";
 							}
 

@@ -1,9 +1,9 @@
 <?php
-	require_once ('./menu.php');
+	require_once ('menu.php');
 ?>
 <!doctype html>
 <html lang="en">
-	<?php include "header.html";?>
+	<?php include "header.php";?>
 <body>
 	<?php include_once("analyticstracking.php") ?>
 	<!-- Header -->

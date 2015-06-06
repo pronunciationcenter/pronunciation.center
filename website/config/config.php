@@ -9,6 +9,6 @@ class Config{
     public $dbpass    = "";
 
     //Website settings
-    public $wwwroot   = "http://localhost/pronunciation.center/";
+    public $wwwroot   = "http://localhost/pronunciation.center/website/";
 }
 ?>
