@@ -1,5 +1,5 @@
 <?php
-require_once ('dao/connection.php');
+require_once __DIR__.'/../dao/connection.php';
 require_once ('menu.php');
 ?>
 

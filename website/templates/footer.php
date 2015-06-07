@@ -13,9 +13,9 @@
 	echo "<li><a href='settings'>Settings</a></li>";
 	echo "</ul>";
 	echo "</nav>";
-	echo "<a class='btn' href='https://www.facebook.com/pronunciation.center' > <img src='img/icons/facebook.png'>	</a>";
-	echo "<a class='btn' href='https://twitter.com/pronuncenter' > <img src='img/icons/twitter.png'>	</a>";
-	echo "<a class='btn' href='mailto:pronunciation.center@gmail.com'> <img src='img/icons/gmail.png'></a>";
+	echo "<a class='btn' href='https://www.facebook.com/pronunciation.center' > <img src='images/icons/facebook.png'>	</a>";
+	echo "<a class='btn' href='https://twitter.com/pronuncenter' > <img src='images/icons/twitter.png'>	</a>";
+	echo "<a class='btn' href='mailto:pronunciation.center@gmail.com'> <img src='images/icons/gmail.png'></a>";
 	echo "</footer>";
 	echo "</div>";
 ?>
