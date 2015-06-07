@@ -43,7 +43,7 @@ require_once ('menu.php');
 
 						/* fetch values */
 						if ($stmt->fetch()) {
-							echo "<a href='ipa/id=$id'>[ $letter ]</a>";
+							echo "<a href='ipa/$id'>[ $letter ]</a>";
 							echo "</h1>";
 							echo "<div class='container'>";
 							echo "<h2>Examples: $examples</h2>";
