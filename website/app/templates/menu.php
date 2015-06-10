@@ -5,7 +5,7 @@ class menu
 	function getMenu($active){
 		$config = new Config();
 		echo "<div id='logo' class='text-center'>";
-		echo "<a href='$config->wwwroot'><img src='./images/images/logo2.png'></a>";
+		echo "<a href='$config->wwwroot'><img src='public/images/images/logo2.png'></a>";
 		echo "</div>";		
 		echo "<nav>";
 		echo "<ul class='nav nav-tabs'>";

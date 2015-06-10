@@ -1,16 +1,16 @@
 <?php
-	require_once ('menu.php');
+	require_once 'menu.php';
 ?>
 <!doctype html>
 <html lang="en">
-	<?php include "header.php";?>
+	<?php require_once 'header.php';?>
 <body>
-	<?php include_once("analyticstracking.php") ?>
+	<?php require_once 'analyticstracking.php' ?>
 	<!-- Header -->
 	<div id="header-wrapper" class="container">
 		<?php 
 			$menu = new menu();
-			$menu->getMenu("suggestions");
+			$menu->getMenu("settings");
 		?>
 	</div>
 	
@@ -19,7 +19,7 @@
 		<main class="">
 			<article>
 				<header>
-					<h1>Suggested links</h1>
+					<h1>Settings</h1>
 					<p>Page in construction.
 					</p>
 				</header>
@@ -31,6 +31,6 @@
 			</section>
 		</main>
 	</div>
-	<?php include "footer.php";?>
+	<?php require_once 'footer.php';?>
 </body>
 </html>

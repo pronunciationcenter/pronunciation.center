@@ -1,3 +1,4 @@
+Options -Indexes
 RewriteEngine on
 RewriteCond %{REQUEST_URI} !(public|css|images|js)
 RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt|sitemap\.xml)$ [NC]
