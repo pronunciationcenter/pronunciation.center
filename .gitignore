@@ -1,6 +1,5 @@
 /vendor/
-/cache/
-website/app/cache/
+/website/app/cache/
 
 .settings/org.eclipse.wst.jsdt.ui.superType.name
 .settings/org.eclipse.wst.common.project.facet.core.xml
