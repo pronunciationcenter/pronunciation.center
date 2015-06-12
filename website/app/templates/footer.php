@@ -1,6 +1,4 @@
 <?php
-	require_once __DIR__.'/../config/config.php';
-	$config = new Config();
 	echo "<!-- Footer -->";
 	echo "<div id='footer-wrapper' class='container'>";
 	echo "<footer>";

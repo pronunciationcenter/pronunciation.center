@@ -1,20 +1,16 @@
 <?php
 
-	require_once __DIR__.'/../vendor/autoload.php';
-	require_once __DIR__.'/config/config.php';
-	require_once __DIR__.'/dao/connection.php';
-	
-	use Slim\View;
-	
+	require_once '/../vendor/autoload.php';
+	require_once '/config/config.php';
 	
 	/**
 	 * Settings**********************************************
 	 */
 	// Set the mode
-	$app = new \Slim\Slim ( array (
-			// 'mode' => 'production'
-			'mode' => 'development'
-	) );
+	$app = new \Slim\Slim(array(
+			'view' => new \Slim\Views\Twig(),
+			'mode' => 'development',
+	));
 	
 	// Only invoked if mode is "production"
 	$app->configureMode ( 'production', function () use($app) {
@@ -34,40 +30,35 @@
 	
 	/**
 	 * Views************************************************
-	 * Option 2: array('templates.path' => __DIR__.'/templates/')
 	 */
- 	$view = $app->view();
+	$view = $app->view();
+	$view->parserOptions = array(
+		'debug' => true,
+		'cache' => __DIR__.'/cache/'
+	);
 	$view->setTemplatesDirectory(__DIR__.'/templates/');
+	$view->parserExtensions = array(
+			new \Slim\Views\TwigExtension()
+	);
+/* 	$twig = $app->view()->getEnvironment();
+	$lexer = new Twig_Lexer($twig,array(
+			'tag_block' => array('{','}'),
+			'tag_variable' => array('{{','}}')
+	));
+	$twig->setLexer($lexer); */
 	
 	/**
-	 **routes************************************************
+	 * Database
 	 */
-	$app->get ( '/', function () use($app) {
-		$app->render ( 'index.php' );
-	} )->name ( 'home' );
+	$app->container->singleton('db', function(){
+		return new PDO('mysql:host=127.0.0.1;dbname=pronunciationDB;charset=utf8','root','');
+		//return new PDO('mysql:host=127.0.0.1;dbname=pronunciationDB;charset=utf8','root','password');
+	});
 	
-	$app->get ( '/ipa', function () use($app) {
-		$app->render ( 'ipa.php' );
-	} )->name ( 'ipa' );
-	
-	$app->get ( '/ipa/:id', function ($id) use($app) {
-		$app->render ( 'ipa.php', array (
-				'id' => $id 
-		) );
-	} );
-	
-	$app->get ( '/tips', function () use($app) {
-		$app->render ( 'tips.php' );
-	} )->name ( 'tips' );
-	
-	$app->get ( '/suggestions', function () use($app) {
-		$app->render ( 'suggestions.php' );
-	} )->name ( 'suggestions' );
-	
-	$app->get ( '/settings', function () use($app) {
-		$app->render ( 'settings.php' );
-	} )->name ( 'settings' );
+	/**
+	 **Routes************************************************
+	 */
+	require_once '/routers/routers.php';
 	
 	$app->run ();
-
 ?>
