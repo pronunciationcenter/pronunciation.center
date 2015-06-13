@@ -42,12 +42,12 @@
 	{% if id is defined %}
 		<article>
 			<header>
-				<h1><a href='ipa'>IPA</a>
+				<h1><a href='{{urlFor('ipa')}}'>IPA</a>
 				{% if ipaExample is defined %}
-					<a href='ipa/{{ipaExample.id}}'> > [ {{ipaExample.letter}} ]</a>
+					<a href='{{urlFor('ipa')}}/{{ipaExample.id}}'> > [ {{ipaExample.letter}} ]</a>
 					</h1>
 					<div class='container'>
-						<h2>Examples:{{ipaExample.examples}}</h2>
+						<h2>Examples: {{ipaExample.examples}}</h2>
 						{% if ipaExample.picture is defined %}
 							<p><img src='{{ipaExample.picture}}' style='float:left;' class='thumbnail' height='128' width='128'>{{ipaExample.description}}
 							</p>

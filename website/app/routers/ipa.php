@@ -1,6 +1,8 @@
 <?php
 	$app->get ( '/ipa', function () use($app) {
 		
+		$app->expires('+1 hour');
+		
 		$vowels = $app->db->query("
 				SELECT ie.id, i.letter, i.type, ie.examples
 				FROM ipa i  
@@ -27,6 +29,8 @@
 	} )->name ( 'ipa' );
 	
 	$app->get ( '/ipa/:id', function ($id) use($app) {
+		
+		$app->expires('+1 hour');
 		
 		$ipaExample = $app->db->prepare("
 				SELECT ie.id, i.letter, i.type, ie.examples, ie.description, ie.picture 
