@@ -4,17 +4,16 @@
 {% block head %}
 <head>
 	<meta charset="utf-8">
-	{% block title %}
-		<title>Pronunciation.Center</title>
-	{% endblock title %}
 	<meta name="description" content="Pronunciation Website">
 	<meta name="author" content="Waldeilson Santos">
-	<meta name="keywords" content="Pronunciation">
+	<meta name="keywords" content="Pronunciation, Learning English">
 	<base href="{{baseUrl()}}"/>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="{{baseUrl()}}/public/css/bootstrap-3.3.2-dist/css/bootstrap.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="{{baseUrl()}}/public/css/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+	{% block title %}
+	{% endblock title %}
 </head>
 {% endblock head %}
 
@@ -25,16 +24,28 @@
 	{% block menu %}
 	<div id="header-wrapper" class="container">
 		<div id='logo' class='text-center'>
-			<a href='{{urlFor('home')}}'><img src='{{baseUrl()}}/public/images/images/logo2.png'></a>
-		</div>		
+			<!--<a href='{{urlFor('home')}}'><img src='{{baseUrl()}}/public/images/images/logo2.png'></a>-->
+		</div>
 		<nav>
 			<ul class='nav nav-tabs'>
-				<li><a href="{{urlFor('home')}}">Pronunciation.Center</a></li>
-				<li><a href="{{urlFor('home')}}">Home</a></li>
-				<li><a href="{{urlFor('ipa')}}">IPA</a></li>
-				<li><a href="{{urlFor('tips')}}">Pronunciation Tips</a></li>
-				<li><a href="{{urlFor('suggestions')}}">Suggested Links</a></li>
-				<li><a href="{{urlFor('settings')}}">Settings</a></li>
+				<li>
+					<a href="{{urlFor('home')}}">Pronunciation.Center</a>
+				</li>
+				<li class="{{ currentUrl()==siteUrl('home')?'active'}}">
+					<a href="{{urlFor('home')}}">Home</a>
+				</li>
+				<li class="{{ currentUrl()==siteUrl('ipa')?'active'}}">
+					<a href="{{urlFor('ipa')}}">IPA</a>
+				</li>
+				<li class="{{ currentUrl()==siteUrl('tips')?'active'}}">
+					<a href="{{urlFor('tips')}}">Pronunciation Tips</a>
+				</li>
+				<li class="{{ currentUrl()==siteUrl('suggestions')?'active'}}">
+					<a href="{{urlFor('suggestions')}}">Suggested Links</a>
+				</li>
+				<li class="{{ currentUrl()==siteUrl('settings')?'active'}}">
+					<a href="{{urlFor('settings')}}">Settings</a>
+				</li>
 			</ul>
 		</nav>
 	</div>
