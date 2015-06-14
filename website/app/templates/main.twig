@@ -7,11 +7,13 @@
 	<meta name="description" content="Pronunciation Website">
 	<meta name="author" content="Waldeilson Santos">
 	<meta name="keywords" content="Pronunciation, Learning English">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<base href="{{baseUrl()}}"/>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="{{baseUrl()}}/public/css/bootstrap-3.3.2-dist/css/bootstrap.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="{{baseUrl()}}/public/css/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="{{baseUrl()}}/public/css/custom.css">
 	{% block title %}
 	{% endblock title %}
 </head>
@@ -56,7 +58,7 @@
 	</script>
 
 	{% block menu %}
-	<div id="header-wrapper" class="container">
+	<div id="header-wrapper" class="container header-container">
 		<div id='logo' class='text-center'>
 			<!--<a href='{{urlFor('home')}}'><img src='{{baseUrl()}}/public/images/images/logo2.png'></a>-->
 		</div>
@@ -86,17 +88,19 @@
 	{% endblock menu %}
 
 	<!-- Main -->
-	<div class="wrapper container">
-		<main class="">
-			{% block content %}
-			{% endblock content %}
-		</main>
+	<div class="container main-container">
+		<div class="row">
+			<main class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				{% block content %}
+				{% endblock content %}
+			</main>
+		</div>
 	</div>
 
 
 	{% block footer %}
 	<!-- Footer -->
-	<div id='footer-wrapper' class='container'>
+	<div id='footer-wrapper' class='container footer-container'>
 		<footer>
 			<nav>
 				<ul class='nav nav-pills'>

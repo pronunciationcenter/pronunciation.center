@@ -15,7 +15,7 @@
 			<figure id="imgExample"></figure>
 			<p><a href="http://en.wikipedia.org/wiki/International_Phonetic_Alphabet">The International Phonetic Alphabet</a> is an alphabetic system of phonetic notation based primarily on the Latin alphabet. It was devised by the International Phonetic Association as a standardized representation of the sounds of oral language. The IPA is used by lexicographers, foreign language students and teachers, linguists, speech-language pathologists, singers, actors, constructed language creators, and translators.
 			</p>
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-md-6">
 				<table id="voewls" class="table table-striped table-hover table-bordered table-condensed table-responsive">
 					<tr><td>Phoneme</td><td>Examples</td></tr>
 					{% for phoneme in vowels %}
@@ -25,7 +25,7 @@
 					{% endfor %}
 				</table>
 			</div>
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-md-6">
 				<table id="consonants" class="table table-striped table-hover table-bordered table-condensed table-responsive">
 					<tr><td>Phoneme</td><td>Examples</td></tr>
 					{% for phoneme in consonantes %}
@@ -46,7 +46,7 @@
 				{% if ipaExample is defined %}
 					<a href='{{urlFor('ipa')}}/{{ipaExample.id}}'> > [ {{ipaExample.letter}} ]</a>
 					</h1>
-					<div class='container'>
+					<div>
 						<h2>Examples: {{ipaExample.examples}}</h2>
 						{% if ipaExample.picture is defined %}
 							<p><img src='{{ipaExample.picture}}' style='float:left;' class='thumbnail' height='128' width='128'>{{ipaExample.description}}
@@ -54,12 +54,12 @@
 						{% endif %}
 						<p>{{ipaExample.description}}
 						</p>	
-						</div>
+					</div>
 				{% endif %}
 				{% if ipaExample is null %}
 					</h1>
 				{% endif %}
-				<div class='container'>
+				<div>
 					<section id='tips'>
 						{% for tip in tips %}
 							<iframe width='560' height='315' src='{{tip.link}}' frameborder='0' allowfullscreen>

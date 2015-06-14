@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+	h1 {
+    	font-size:40px;
+    }
+    
+    .header-container, .footer-container{
+    	font-size:20px;
+    }
+    
+    .main-container{
+    	font-size:26px;
+    }
+}
