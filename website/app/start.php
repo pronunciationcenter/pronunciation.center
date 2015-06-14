@@ -1,62 +1,51 @@
 <?php
-
-	require_once __DIR__.'/../vendor/autoload.php';
+	require_once __DIR__ . '/../vendor/autoload.php';
+	
+	
+	$config = require_once __DIR__ . '/config.php';
 	
 	/**
 	 * Settings**********************************************
 	 */
+	
 	// Set the mode
-	$app = new \Slim\Slim(array(
-			'view' => new \Slim\Views\Twig(),
-			'mode' => 'development',
-	));
+	$app = new \Slim\Slim ( array (
+			'view' => new \Slim\Views\Twig (),
+			'mode' => $config['mode'] 
+	) );
 	
-	// Only invoked if mode is "production"
-	$app->configureMode ( 'production', function () use($app) {
-		$view = $app->view();
-		$view->parserOptions = array(
-				'debug' => false,
-				'cache' => __DIR__.'/../cache/'
+	// Only invoked if mode is "production" or "development"
+	$app->configureMode ( $config['mode'], function () use($app, $config) {
+		$mode = $config['mode'];
+		$view = $app->view ();
+		$view->parserOptions = array (
+				'debug' => $config[$mode]['debug'],
+				'cache' => $config['view']['cache_path'],
 		);
-		$app->config ( array (
-				'log.enable' => true,
-				'debug' => false 
-		) );
-	} );
-	
-	// Only invoked if mode is "development"
-	$app->configureMode ( 'development', function () use($app) {
-		$view = $app->view();
-		$view->parserOptions = array(
-				'debug' => true,
-				'cache' => __DIR__.'/../cache/'
-		);
-		$app->config ( array (
-				'log.enable' => false,
-				'debug' => true 
-		) );
+		
+		$app->config ( $config[$mode] );
 	} );
 	
 	/**
 	 * Views************************************************
 	 */
-	$view = $app->view();
-	$view->setTemplatesDirectory(__DIR__.'/templates/');
-	$view->parserExtensions = array(
-			new \Slim\Views\TwigExtension()
+	$view = $app->view ();
+	$view->setTemplatesDirectory ($config['view']['templates_path']);
+	$view->parserExtensions = array (
+			new \Slim\Views\TwigExtension() 
 	);
 	
 	/**
 	 * Database
 	 */
-	$app->container->singleton('db', function(){
-		return new PDO('mysql:host=127.0.0.1;dbname=pronunciationDB;charset=utf8','root','');
-	});
+	$app->container->singleton ( 'db', function () use ($config) {
+		return new PDO ( $config['dbstring'], $config['dbusername'], $config['dbpassword'] );
+	} );
 	
 	/**
-	 **Routes************************************************
+	 * *Routes************************************************
 	 */
-	require_once __DIR__.'/routers/routers.php';
+	require_once __DIR__ . '/routers/routers.php';
 	
 	$app->run ();
 ?>
