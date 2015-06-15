@@ -2,6 +2,8 @@
 return array (
 		'mode' => 'development', // or production
 		
+		'default_lang' => 'en',
+		
 		'development' => [ 
 				'log.enable' => false,
 				'debug' => true 
