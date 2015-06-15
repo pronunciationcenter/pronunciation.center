@@ -1,5 +1,10 @@
 <?php
 	$app->get ( '/ipa', function () use($app) {
+		
+		//cache
+		$app->etag('ipa' + time()>>12);   //the id is the ame for 1 hour with >>12
+		$app->expires('+1 hour');
+		
 		$vowels = $app->db->query("
 				SELECT ie.id, i.letter, i.type, ie.examples
 				FROM ipa i  
@@ -26,6 +31,11 @@
 	} )->name ( 'ipa' );
 	
 	$app->get ( '/ipa/:id', function ($id) use($app) {		
+	
+		//cache
+		$app->etag('ipa' + time()>>12 + $id);   //the id is the ame for 1 hour with >>12
+		$app->expires('+1 hour');
+		
 		$ipaExample = $app->db->prepare("
 				SELECT ie.id, i.letter, i.type, ie.examples, ie.description, ie.picture 
 				FROM ipa i  
