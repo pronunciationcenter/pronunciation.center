@@ -4,9 +4,9 @@
 {% block head %}
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="Pronunciation Website">
 	<meta name="author" content="Waldeilson Santos">
-	<meta name="keywords" content="Pronunciation, Learning English">
+	<meta name="description" content="Learn: English; Pronunciation; English Pronunciation; Internation Phonetic Alphabet; Phonemes; Pronounce; Pronunciation Center is your portal for pronunciation">
+	<meta name="keywords" content="english,phonetic alphabet,pronunciation,how to pronounce,phonemes,phoneme,international phonetic alphabet,pronounce words,how to improve spoken english">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<base href="{{baseUrl()}}"/>
 	<!-- Latest compiled and minified CSS -->
@@ -43,15 +43,15 @@
 				<li class="{{ currentUrl()==siteUrl('ipa')?'active'}}">
 					<a href="{{urlFor('ipa')}}">IPA</a>
 				</li>
-				<li class="{{ currentUrl()==siteUrl('tips')?'active'}}">
-					<a href="{{urlFor('tips')}}">Pronunciation Tips</a>
-				</li>
-				<li class="{{ currentUrl()==siteUrl('suggestions')?'active'}}">
-					<a href="{{urlFor('suggestions')}}">Suggested Links</a>
-				</li>
-				<li class="{{ currentUrl()==siteUrl('settings')?'active'}}">
-					<a href="{{urlFor('settings')}}">Settings</a>
-				</li>
+{# 				<li class="{{ currentUrl()==siteUrl('tips')?'active'}}">#}
+{# 					<a href="{{urlFor('tips')}}">Pronunciation Tips</a>#}
+{# 				</li>#}
+{# 				<li class="{{ currentUrl()==siteUrl('suggestions')?'active'}}">#}
+{# 					<a href="{{urlFor('suggestions')}}">Suggested Links</a>#}
+{# 				</li>#}
+{# 				<li class="{{ currentUrl()==siteUrl('settings')?'active'}}">#}
+{# 					<a href="{{urlFor('settings')}}">Settings</a>#}
+{# 				</li>#}
 			</ul>
 		</nav>
 	</div>
@@ -76,9 +76,10 @@
 				<ul class='nav nav-pills'>
 					<li><a href="{{urlFor('home')}}">Home</a></li>
 					<li><a href="{{urlFor('ipa')}}">IPA</a></li>
-					<li><a href="{{urlFor('tips')}}">Pronunciation Tips</a></li>
-					<li><a href="{{urlFor('suggestions')}}">Suggested Links</a></li>
-					<li><a href="{{urlFor('settings')}}">Settings</a></li>
+{# 					<li><a href="{{urlFor('tips')}}">Pronunciation Tips</a></li>#}
+{# 					<li><a href="{{urlFor('articles')}}">Pronunciation Tips</a></li>#}
+{# 					<li><a href="{{urlFor('suggestions')}}">Suggested Links</a></li>#}
+{# 					<li><a href="{{urlFor('settings')}}">Settings</a></li>#}
 				</ul>
 			</nav>
 			<br/>

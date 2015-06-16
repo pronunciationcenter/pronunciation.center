@@ -1,5 +1,5 @@
 <?php
-	$app->get ( '/ipa', function () use($app) {
+	$app->get ( '/international-phonetic-alphabet', function () use($app) {
 		
 		//cache
 		$app->etag('ipa' + time()>>12);   //the id is the ame for 1 hour with >>12
@@ -30,7 +30,7 @@
 			
 	} )->name ( 'ipa' );
 	
-	$app->get ( '/ipa/:id', function ($id) use($app) {		
+	$app->get ( '/international-phonetic-alphabet/:id', function ($id) use($app) {		
 	
 		//cache
 		$app->etag('ipa' + time()>>12 + $id);   //the id is the ame for 1 hour with >>12
