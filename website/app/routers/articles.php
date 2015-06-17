@@ -1,5 +1,5 @@
 <?php
-	$app->get ( '/pronunciation-articles', function () use($app) {
+	$app->get ( '/articles', function () use($app) {
 		
 		//cache
 		$app->etag('articles' + time()>>16);   //the id is the ame for 1 day >>16

@@ -32,21 +32,21 @@
 
 	{% block menu %}
 	<div id="header-wrapper" class="container header-container">
-		<div id='logo' class='text-center'>
-			<!--<a href='{{urlFor('home')}}'><img src='{{baseUrl()}}/public/images/images/logo2.png'></a>-->
-		</div>
 		<nav>
 			<ul class='nav nav-tabs'>
 				<li class="{{ currentUrl()==siteUrl('home')?'active'}}">
 					<a href="{{urlFor('home')}}">Pronunciation.Center</a>
 				</li>
-				<li class="{{ currentUrl()==siteUrl('ipa')?'active'}}">
+				<li class="{{ currentUrl()==siteUrl('international-phonetic-alphabet')?'active'}}">
 					<a href="{{urlFor('ipa')}}">IPA</a>
 				</li>
 {# 				<li class="{{ currentUrl()==siteUrl('tips')?'active'}}">#}
 {# 					<a href="{{urlFor('tips')}}">Pronunciation Tips</a>#}
 {# 				</li>#}
-{# 				<li class="{{ currentUrl()==siteUrl('suggestions')?'active'}}">#}
+{# 				<li class="{{ currentUrl()==siteUrl('articles')?'active'}}">#}
+{# 					<a href="{{urlFor('articles')}}">Suggested Links</a>#}
+{# 				</li>#}
+{# 				<li class="{{ currentUrl()==siteUrl('suggested-sites')?'active'}}">#}
 {# 					<a href="{{urlFor('suggestions')}}">Suggested Links</a>#}
 {# 				</li>#}
 {# 				<li class="{{ currentUrl()==siteUrl('settings')?'active'}}">#}

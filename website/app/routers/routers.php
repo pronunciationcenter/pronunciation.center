@@ -9,8 +9,8 @@
 	/*
 	 * Deprecated routers
 	 */
-	$app->get ( '/tips', function () use($app) {
-		$app->redirect ( 'pronunciation-tips' );
+	$app->get ( '/pronunciation-tips', function () use($app) {
+		$app->redirect ( 'tips' );
 	} );
 	
 	$app->get ( '/suggestions', function () use($app) {
