@@ -1,9 +1,9 @@
-<?php 
-	return array (
-			'title' => 'Pronunciation.Center - Home',
-			'header' => 'Welcome',
-			'header_message' => 'Welcome to Pronunciation.Center!',
-			'content' => ' 
+<?php
+return array(
+    'title' => 'Pronunciation.Center - Home',
+    'header' => 'Welcome',
+    'header_message' => 'Welcome to Pronunciation.Center!',
+    'content' => ' 
 			<p>The is your portal to learn English Pronunciation.
 			</p>
 			<p>English words are made up by 40 phonemes. 
@@ -21,6 +21,5 @@
 				This website was made to help you in this journey of learning the English pronunciation.
 			</p>
 			'
-	);
-?>
+);
 		

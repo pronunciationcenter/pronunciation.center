@@ -1,3 +1,2 @@
 <?php
-	require_once 'app/start.php';
-?>
+require_once 'app/start.php';
