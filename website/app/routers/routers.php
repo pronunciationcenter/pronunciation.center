@@ -1,6 +1,6 @@
 <?php
 require_once 'home.php';
-require_once 'ipa.php';
+require_once 'phonemes.php';
 require_once 'settings.php';
 require_once 'suggestions.php';
 require_once 'tips.php';
@@ -18,5 +18,9 @@ $app->get('/suggestions', function () use($app) {
 });
 
 $app->get('/ipa', function () use($app) {
-    $app->redirect('international-phonetic-alphabet');
+    $app->redirect('phonemes');
+});
+
+$app->get('/international-phonetic-alphabet', function () use($app) {
+    $app->redirect('phonemes');
 });

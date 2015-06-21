@@ -4,7 +4,7 @@
 			'description' => 'Pronunciation Website',
 			'keywords' => 'Pronunciation, Learning English',
 			'home_menu' => 'Home',
-			'ipa_menu' => 'IPA',
+			'phoneme_menu' => 'Phonemes',
 			'suggestions_menu' => 'Suggested Links',
 			'tips_menu' => 'Pronunciation Tips',
 			'settings_menu' => 'Settings'

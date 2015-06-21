@@ -10,6 +10,7 @@
         "monolog/monolog": "^1.13",
         "slim/slim": "^2.6",
         "twig/twig": "^1.18",
-        "slim/views": "^0.1.3"
+        "slim/views": "^0.1.3",
+        "wwesantos/arpabet-to-ipa": "^1.0"
     }
 }

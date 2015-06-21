@@ -1,6 +1,6 @@
 <?php
 return array(
-    'mode' => 'development', // or production
+    'mode' => 'development', // or development
     
     'default_lang' => 'en',
     
@@ -9,7 +9,7 @@ return array(
         'debug' => true
     ],
     
-    'prodution' => [
+    'production' => [
         'log.enable' => true,
         'debug' => false
     ],
@@ -19,7 +19,7 @@ return array(
         'templates_path' => __DIR__ . '/templates/'
     ],
     
-    'dbstring' => 'mysql:host=127.0.0.1;dbname=pronunciationDB;charset=utf8',
+    'dbstring' => 'mysql:host=127.0.0.1;dbname=pronunciationDB2;charset=utf8',
     'dbusername' => 'root',
     'dbpassword' => ''
 );

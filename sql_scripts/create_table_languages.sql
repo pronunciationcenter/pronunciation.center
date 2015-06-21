@@ -1,9 +1,10 @@
-CREATE DATABASE IF NOT EXISTS `pronunciationDB` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `pronunciationDB2` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-drop table IF EXISTS `contact`;
+use `pronunciationDB2`;
+
 drop table IF EXISTS `tips`;
-drop table IF EXISTS `ipa_examples`;
-drop table IF EXISTS `ipa`;
+drop table IF EXISTS `phoneme_examples`;
+drop table IF EXISTS `phonemes`;
 drop table IF EXISTS `languages`;
 
 
@@ -252,130 +253,123 @@ insert into languages(code, name) values('zh-TW', 'Chinese (T)');
 insert into languages(code, name) values('zu', 'Zulu');
 insert into languages(code, name) values('zu-ZA', 'Zulu (South Africa)');
 
-create table ipa (
+create table phonemes (
 	id int primary key auto_increment,
 	letter varchar (5),
 	type char(1)
 );
-insert into ipa(letter, type) values('ʌ', 'V');
-insert into ipa(letter, type) values('ɑ:', 'V');
-insert into ipa(letter, type) values('æ', 'V');
-insert into ipa(letter, type) values('e', 'V');
-insert into ipa(letter, type) values('ə', 'V');
-insert into ipa(letter, type) values('ɜ:ʳ', 'V');
-insert into ipa(letter, type) values('ɪ', 'V');
-insert into ipa(letter, type) values('i:', 'V');
-insert into ipa(letter, type) values('ɒ', 'V');
-insert into ipa(letter, type) values('ɔ:', 'V');
-insert into ipa(letter, type) values('ʊ', 'V');
-insert into ipa(letter, type) values('u:', 'V');
-insert into ipa(letter, type) values('aɪ', 'V');
-insert into ipa(letter, type) values('aʊ', 'V');
-insert into ipa(letter, type) values('eɪ', 'V');
-insert into ipa(letter, type) values('oʊ', 'V');
-insert into ipa(letter, type) values('ɔɪ', 'V');
-insert into ipa(letter, type) values('eəʳ', 'V');
-insert into ipa(letter, type) values('ɪəʳ', 'V');
-insert into ipa(letter, type) values('ʊəʳ', 'V');
+insert into phonemes(letter, type) values('ʌ', 'V');
+insert into phonemes(letter, type) values('ɑ', 'V');
+insert into phonemes(letter, type) values('æ', 'V');
+insert into phonemes(letter, type) values('e', 'V');
+insert into phonemes(letter, type) values('ə', 'V');
+insert into phonemes(letter, type) values('ɜr', 'V');
+insert into phonemes(letter, type) values('ɪ', 'V');
+insert into phonemes(letter, type) values('i', 'V');
+insert into phonemes(letter, type) values('ɒ', 'V');
+insert into phonemes(letter, type) values('ɔ', 'V');
+insert into phonemes(letter, type) values('ʊ', 'V');
+insert into phonemes(letter, type) values('u', 'V');
+insert into phonemes(letter, type) values('aɪ', 'V');
+insert into phonemes(letter, type) values('aʊ', 'V');
+insert into phonemes(letter, type) values('eɪ', 'V');
+insert into phonemes(letter, type) values('oʊ', 'V');
+insert into phonemes(letter, type) values('ɔɪ', 'V');
+insert into phonemes(letter, type) values('er', 'V'); /*eəʳ*/
+insert into phonemes(letter, type) values('ɪr', 'V'); /*ɪəʳ*/
+insert into phonemes(letter, type) values('ʊr', 'V'); /*ʊəʳ*/
 
-insert into ipa(letter, type) values('b', 'C');
-insert into ipa(letter, type) values('d', 'C');
-insert into ipa(letter, type) values('f', 'C');
-insert into ipa(letter, type) values('g', 'C');
-insert into ipa(letter, type) values('h', 'C');
-insert into ipa(letter, type) values('j', 'C');
-insert into ipa(letter, type) values('k', 'C');
-insert into ipa(letter, type) values('l', 'C');
-insert into ipa(letter, type) values('m', 'C');
-insert into ipa(letter, type) values('n', 'C');
-insert into ipa(letter, type) values('ŋ', 'C');
-insert into ipa(letter, type) values('p', 'C');
-insert into ipa(letter, type) values('r', 'C');
-insert into ipa(letter, type) values('s', 'C');
-insert into ipa(letter, type) values('ʃ', 'C');
-insert into ipa(letter, type) values('t', 'C');
-insert into ipa(letter, type) values('tʃ', 'C');
-insert into ipa(letter, type) values('θ', 'C');
-insert into ipa(letter, type) values('ð', 'C');
-insert into ipa(letter, type) values('v', 'C');
-insert into ipa(letter, type) values('w', 'C');
-insert into ipa(letter, type) values('z', 'C');
-insert into ipa(letter, type) values('ʒ', 'C');
-insert into ipa(letter, type) values('dʒ', 'C');
+insert into phonemes(letter, type) values('b', 'C');
+insert into phonemes(letter, type) values('d', 'C');
+insert into phonemes(letter, type) values('f', 'C');
+insert into phonemes(letter, type) values('g', 'C');
+insert into phonemes(letter, type) values('h', 'C');
+insert into phonemes(letter, type) values('j', 'C');
+insert into phonemes(letter, type) values('k', 'C');
+insert into phonemes(letter, type) values('l', 'C');
+insert into phonemes(letter, type) values('m', 'C');
+insert into phonemes(letter, type) values('n', 'C');
+insert into phonemes(letter, type) values('ŋ', 'C');
+insert into phonemes(letter, type) values('p', 'C');
+insert into phonemes(letter, type) values('r', 'C');
+insert into phonemes(letter, type) values('s', 'C');
+insert into phonemes(letter, type) values('ʃ', 'C');
+insert into phonemes(letter, type) values('t', 'C');
+insert into phonemes(letter, type) values('tʃ', 'C');
+insert into phonemes(letter, type) values('θ', 'C');
+insert into phonemes(letter, type) values('ð', 'C');
+insert into phonemes(letter, type) values('v', 'C');
+insert into phonemes(letter, type) values('w', 'C');
+insert into phonemes(letter, type) values('z', 'C');
+insert into phonemes(letter, type) values('ʒ', 'C');
+insert into phonemes(letter, type) values('dʒ', 'C');
 
-create table ipa_examples (
+create table phoneme_examples (
 	id int primary key auto_increment,
-	id_ipa int,
+	id_phoneme int,
 	id_language int,
 	examples varchar(100),
 	description varchar(2000),
 	picture varchar(300)
 );
-ALTER TABLE `ipa_examples` ADD INDEX(`id_ipa`);
-ALTER TABLE `ipa_examples` ADD INDEX(`id_language`);
-ALTER TABLE `ipa_examples` ADD CONSTRAINT `FK_ipa` FOREIGN KEY (`id_ipa`) REFERENCES `ipa`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
-ALTER TABLE `ipa_examples` ADD CONSTRAINT `FK_language` FOREIGN KEY (`id_language`) REFERENCES `languages`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(1 ,57, 'cup, luck', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(2 ,57, 'arm, father', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(3 ,57, 'cat, black', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(4 ,57, 'met, bed', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(5 ,57, 'away, cinema', 'The [ə] phoneme is one of the most common sound in English. There are many spellings for [ə], such as: “a”, “ou”, “o”, “io”, “u”, “e”, “ea”, and “ia”. Examples: about, famous, complete, million, just, children, ocean, could, and special. To make this sound the mouth remains relaxed, with the lips slightly apart, and the teeth will be closed but not quite touching. The tongue remains flat and forward, very relaxed, lightly touching behind the bottom teeth. The vocal folds vibrate to produce this sound.','https://www.rachelsenglish.com/sites/default/files/sound_pics/ur_her_comp_all.jpg');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(6 ,57, 'turn, learn', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(7 ,57, 'hit, sitting', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(8 ,57, 'see, heat', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(9 ,57, 'hot, rock', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(10 ,57, 'call, four', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(11 ,57, 'put, could', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(12 ,57, 'blue, food', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(13 ,57, 'five, eye', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(14 ,57, 'now, out', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(15 ,57, 'say, eight', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(16 ,57, 'go, home', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(17 ,57, 'boy, join', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(18 ,57, 'where, air', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(19 ,57, 'near, here', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(20 ,57, 'pure, tourist', '','');
+ALTER TABLE `phoneme_examples` ADD INDEX(`id_phoneme`);
+ALTER TABLE `phoneme_examples` ADD INDEX(`id_language`);
+ALTER TABLE `phoneme_examples` ADD CONSTRAINT `FK_phoneme` FOREIGN KEY (`id_phoneme`) REFERENCES `phonemes`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `phoneme_examples` ADD CONSTRAINT `FK_language` FOREIGN KEY (`id_language`) REFERENCES `languages`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(1 ,57, 'cup, luck', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(2 ,57, 'arm, father', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(3 ,57, 'cat, black', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(4 ,57, 'met, bed', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(5 ,57, 'away, cinema', 'The [ə] phoneme is one of the most common sound in English. There are many spellings for [ə], such as: “a”, “ou”, “o”, “io”, “u”, “e”, “ea”, and “ia”. Examples: about, famous, complete, million, just, children, ocean, could, and special. To make this sound the mouth remains relaxed, with the lips slightly apart, and the teeth will be closed but not quite touching. The tongue remains flat and forward, very relaxed, lightly touching behind the bottom teeth. The vocal folds vibrate to produce this sound.','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(6 ,57, 'turn, learn', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(7 ,57, 'hit, sitting', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(8 ,57, 'see, heat', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(9 ,57, 'hot, rock', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(10 ,57, 'call, four', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(11 ,57, 'put, could', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(12 ,57, 'blue, food', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(13 ,57, 'five, eye', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(14 ,57, 'now, out', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(15 ,57, 'say, eight', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(16 ,57, 'go, home', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(17 ,57, 'boy, join', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(18 ,57, 'where, air', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(19 ,57, 'near, here', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(20 ,57, 'pure, tourist', '','');
 
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(21 ,57, 'bad, lab', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(22 ,57, 'did, lady', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(23 ,57, 'find, if', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(24 ,57, 'give, flag', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(25 ,57, 'how, hello', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(26 ,57, 'yes, yellow', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(27 ,57, 'cat, back', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(28 ,57, 'leg, little', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(29 ,57, 'man, lemon', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(30 ,57, 'no, ten', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(31 ,57, 'sing, finger', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(32 ,57, 'pet, map', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(33 ,57, 'red, try', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(34 ,57, 'sun, miss', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(35 ,57, 'she, crash', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(36 ,57, 'tea, getting', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(37 ,57, 'check, church', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(38 ,57, 'think, both', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(39 ,57, 'this, mother', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(40 ,57, 'voice, five', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(41 ,57, 'wet, window', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(42 ,57, 'zoo, lazy', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(43 ,57, 'pleasure, vision', '','');
-insert into ipa_examples(id_ipa, id_language, examples, description, picture) values(44 ,57, 'just, large', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(21 ,57, 'bad, lab', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(22 ,57, 'did, lady', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(23 ,57, 'find, if', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(24 ,57, 'give, flag', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(25 ,57, 'how, hello', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(26 ,57, 'yes, yellow', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(27 ,57, 'cat, back', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(28 ,57, 'leg, little', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(29 ,57, 'man, lemon', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(30 ,57, 'no, ten', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(31 ,57, 'sing, finger', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(32 ,57, 'pet, map', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(33 ,57, 'red, try', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(34 ,57, 'sun, miss', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(35 ,57, 'she, crash', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(36 ,57, 'tea, getting', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(37 ,57, 'check, church', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(38 ,57, 'think, both', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(39 ,57, 'this, mother', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(40 ,57, 'voice, five', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(41 ,57, 'wet, window', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(42 ,57, 'zoo, lazy', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(43 ,57, 'pleasure, vision', '','');
+insert into phoneme_examples(id_phoneme, id_language, examples, description, picture) values(44 ,57, 'just, large', '',''); 
 
 create table tips (
 	id int primary key auto_increment,
-	id_ipa_example int,
+	id_phoneme_example int,
 	tittle varchar(50),
 	link varchar(200),
 	description varchar(300)
 );
-ALTER TABLE `tips` ADD INDEX(`id_ipa_example`);
-ALTER TABLE `tips` ADD CONSTRAINT `FK_ipa_examples` FOREIGN KEY (`id_ipa_example`) REFERENCES `ipa_examples`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
-insert into tips(id_ipa_example, tittle, link, description) values(5 ,'English: How to Pronounce the Schwa [ə] -- American Accent', 'https://www.youtube.com/embed/rM9NxK74JSE?rel=0', '');
-insert into tips(id_ipa_example, tittle, link, description) values(5 ,'The /ə/ Sound', 'https://www.youtube.com/embed/RVvn6204I_Y?rel=0', '');
-
-create table contact (
-	id int primary key auto_increment,
-	name varchar(50),
-	email varchar(50),
-	message varchar(2000)
-);
+ALTER TABLE `tips` ADD INDEX(`id_phoneme_example`);
+ALTER TABLE `tips` ADD CONSTRAINT `FK_phoneme_examples` FOREIGN KEY (`id_phoneme_example`) REFERENCES `phoneme_examples`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+insert into tips(id_phoneme_example, tittle, link, description) values(5 ,'English: How to Pronounce the Schwa [ə] -- American Accent', 'https://www.youtube.com/embed/rM9NxK74JSE?rel=0', '');
+insert into tips(id_phoneme_example, tittle, link, description) values(5 ,'The /ə/ Sound', 'https://www.youtube.com/embed/RVvn6204I_Y?rel=0', '');

@@ -6,12 +6,12 @@
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet</loc>
+		<loc>http://pronunciation.center/phonemes</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/pronunciation-tips</loc>
+		<loc>http://pronunciation.center/tips</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -31,222 +31,222 @@
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/1</loc>
+		<loc>http://pronunciation.center/phonemes/1</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/2</loc>
+		<loc>http://pronunciation.center/phonemes/2</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/3</loc>
+		<loc>http://pronunciation.center/phonemes/3</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/4</loc>
+		<loc>http://pronunciation.center/phonemes/4</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/5</loc>
+		<loc>http://pronunciation.center/phonemes/5</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/6</loc>
+		<loc>http://pronunciation.center/phonemes/6</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/7</loc>
+		<loc>http://pronunciation.center/phonemes/7</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/8</loc>
+		<loc>http://pronunciation.center/phonemes/8</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/9</loc>
+		<loc>http://pronunciation.center/phonemes/9</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/10</loc>
+		<loc>http://pronunciation.center/phonemes/10</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/11</loc>
+		<loc>http://pronunciation.center/phonemes/11</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/12</loc>
+		<loc>http://pronunciation.center/phonemes/12</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/13</loc>
+		<loc>http://pronunciation.center/phonemes/13</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/14</loc>
+		<loc>http://pronunciation.center/phonemes/14</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/15</loc>
+		<loc>http://pronunciation.center/phonemes/15</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/16</loc>
+		<loc>http://pronunciation.center/phonemes/16</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/17</loc>
+		<loc>http://pronunciation.center/phonemes/17</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/18</loc>
+		<loc>http://pronunciation.center/phonemes/18</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/19</loc>
+		<loc>http://pronunciation.center/phonemes/19</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/20</loc>
+		<loc>http://pronunciation.center/phonemes/20</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/21</loc>
+		<loc>http://pronunciation.center/phonemes/21</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/22</loc>
+		<loc>http://pronunciation.center/phonemes/22</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/23</loc>
+		<loc>http://pronunciation.center/phonemes/23</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/24</loc>
+		<loc>http://pronunciation.center/phonemes/24</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/25</loc>
+		<loc>http://pronunciation.center/phonemes/25</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/26</loc>
+		<loc>http://pronunciation.center/phonemes/26</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/27</loc>
+		<loc>http://pronunciation.center/phonemes/27</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/28</loc>
+		<loc>http://pronunciation.center/phonemes/28</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/29</loc>
+		<loc>http://pronunciation.center/phonemes/29</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/30</loc>
+		<loc>http://pronunciation.center/phonemes/30</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/31</loc>
+		<loc>http://pronunciation.center/phonemes/31</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/32</loc>
+		<loc>http://pronunciation.center/phonemes/32</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/33</loc>
+		<loc>http://pronunciation.center/phonemes/33</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/34</loc>
+		<loc>http://pronunciation.center/phonemes/34</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/35</loc>
+		<loc>http://pronunciation.center/phonemes/35</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/36</loc>
+		<loc>http://pronunciation.center/phonemes/36</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/37</loc>
+		<loc>http://pronunciation.center/phonemes/37</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/38</loc>
+		<loc>http://pronunciation.center/phonemes/38</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/39</loc>
+		<loc>http://pronunciation.center/phonemes/39</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/40</loc>
+		<loc>http://pronunciation.center/phonemes/40</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/41</loc>
+		<loc>http://pronunciation.center/phonemes/41</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/42</loc>
+		<loc>http://pronunciation.center/phonemes/42</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/43</loc>
+		<loc>http://pronunciation.center/phonemes/43</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://pronunciation.center/international-phonetic-alphabet/44</loc>
+		<loc>http://pronunciation.center/phonemes/44</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>

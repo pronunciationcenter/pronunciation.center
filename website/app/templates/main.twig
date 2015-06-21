@@ -10,9 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<base href="{{baseUrl()}}"/>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="{{baseUrl()}}/public/css/bootstrap-3.3.2-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{baseUrl()}}/public/css/bootstrap-3.3.5/css/bootstrap.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="{{baseUrl()}}/public/css/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+	<script src="{{baseUrl()}}/public/css/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="{{baseUrl()}}/public/css/custom.css">
 	{% block title %}
 	{% endblock title %}
@@ -37,8 +37,8 @@
 				<li class="{{ currentUrl()==siteUrl('home')?'active'}}">
 					<a href="{{urlFor('home')}}">Pronunciation.Center</a>
 				</li>
-				<li class="{{ currentUrl()==siteUrl('international-phonetic-alphabet')?'active'}}">
-					<a href="{{urlFor('ipa')}}">IPA</a>
+				<li class="{{ currentUrl()==siteUrl('phonemes')?'active'}}">
+					<a href="{{urlFor('phonemes')}}">Phonemes</a>
 				</li>
 {# 				<li class="{{ currentUrl()==siteUrl('tips')?'active'}}">#}
 {# 					<a href="{{urlFor('tips')}}">Pronunciation Tips</a>#}
@@ -75,7 +75,7 @@
 			<nav>
 				<ul class='nav nav-pills'>
 					<li><a href="{{urlFor('home')}}">Home</a></li>
-					<li><a href="{{urlFor('ipa')}}">IPA</a></li>
+					<li><a href="{{urlFor('phonemes')}}">Phonemes</a></li>
 {# 					<li><a href="{{urlFor('tips')}}">Pronunciation Tips</a></li>#}
 {# 					<li><a href="{{urlFor('articles')}}">Pronunciation Tips</a></li>#}
 {# 					<li><a href="{{urlFor('suggestions')}}">Suggested Links</a></li>#}
