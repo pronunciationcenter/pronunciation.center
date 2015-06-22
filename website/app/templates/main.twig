@@ -31,30 +31,29 @@
 	</script>
 
 	{% block menu %}
-	<div id="header-wrapper" class="container header-container">
-		<nav>
-			<ul class='nav nav-tabs'>
-				<li class="{{ currentUrl()==siteUrl('home')?'active'}}">
-					<a href="{{urlFor('home')}}">Pronunciation.Center</a>
-				</li>
-				<li class="{{ currentUrl()==siteUrl('phonemes')?'active'}}">
-					<a href="{{urlFor('phonemes')}}">Phonemes</a>
-				</li>
-{# 				<li class="{{ currentUrl()==siteUrl('tips')?'active'}}">#}
-{# 					<a href="{{urlFor('tips')}}">Pronunciation Tips</a>#}
-{# 				</li>#}
-{# 				<li class="{{ currentUrl()==siteUrl('articles')?'active'}}">#}
-{# 					<a href="{{urlFor('articles')}}">Suggested Links</a>#}
-{# 				</li>#}
-{# 				<li class="{{ currentUrl()==siteUrl('suggested-sites')?'active'}}">#}
-{# 					<a href="{{urlFor('suggestions')}}">Suggested Links</a>#}
-{# 				</li>#}
-{# 				<li class="{{ currentUrl()==siteUrl('settings')?'active'}}">#}
-{# 					<a href="{{urlFor('settings')}}">Settings</a>#}
-{# 				</li>#}
-			</ul>
-		</nav>
-	</div>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{urlFor('home')}}">Pronunciation Center</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="{{ currentUrl()==siteUrl('home')?'active'}}">
+              <a href="{{urlFor('home')}}">Home</a>
+            </li>
+            <li class="{{ currentUrl()==siteUrl('phonemes')?'active'}}">
+              <a href="{{urlFor('phonemes')}}">Phonemes</a>
+            </li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav>
 	{% endblock menu %}
 
 	<!-- Main -->
