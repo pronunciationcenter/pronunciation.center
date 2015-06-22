@@ -2,8 +2,8 @@
 $app->get('/home', function () use($app) {
     
     // cache
-    $app->etag('home' + time() >> 19); // the id is the ame for 1 week with >>19
-    $app->expires('+2 days');
+    $app->etag('home' + time() >> 12); // the id is the ame for 1 hour with >>12
+    $app->expires('+1 hour');
     
     $app->render('home.twig');
 })
