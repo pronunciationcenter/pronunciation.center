@@ -31,6 +31,49 @@ footer {
 	padding: 30px 0;
 }
 
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-facebook {
+    width: 56px;
+    height: 56px;
+    background-position: -5px -5px;
+}
+
+.sprite-google {
+    width: 56px;
+    height: 56px;
+    background-position: -71px -5px;
+}
+
+.sprite-linkedin {
+    width: 56px;
+    height: 56px;
+    background-position: -5px -71px;
+}
+
+.sprite-rss {
+    width: 56px;
+    height: 56px;
+    background-position: -71px -71px;
+}
+
+.sprite-twitter {
+    width: 56px;
+    height: 56px;
+    background-position: -137px -5px;
+}
+
+.sprite-youtube {
+    width: 56px;
+    height: 56px;
+    background-position: -137px -71px;
+}
+
+
 /*
  * Off Canvas
  * --------------------------------------------------
