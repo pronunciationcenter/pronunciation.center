@@ -1,82 +1,101 @@
-{% extends 'main.twig' %}
+{% extends 'main.twig' %} 
+{% block title %}English Phonemes | Pronunciation Center{% endblock title %} 
+{% block content %} 
 
-{% block title %}
-		<title>Pronunciation Center - English Phonemes</title>
-{% endblock title %}
-{% block content %}
+{% if id is null %}
+<article>
+	<header>
+		<h1>Phonemes</h1>
+		<p>
+			English words are made up by 40 phonemes. <a
+				href="http://en.wikipedia.org/wiki/International_Phonetic_Alphabet">The
+				International Phonetic Alphabet (IPA)</a> is a set of simbols used
+			to represent those phonemes.
+		</p>
+	</header>
+	<p>The IPA simbols are based primarily on the Latin alphabet. It was
+		devised as a standardized representation of the sounds of oral
+		language. The IPA is used by lexicographers, foreign language students
+		and teachers, linguists, speech-language pathologists, singers,
+		actors, constructed language creators, and translators.</p>
+	<div
+		class="col-xs-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+		<table id="voewls"
+			class="table table-striped table-hover table-bordered table-condensed table-responsive">
+			<caption>Vowels</caption>
+			<thead>
+				<tr>
+					<th>Phoneme</th>
+					<th>Examples</th>
+				</tr>
+			</thead>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			{% for phoneme in vowels %}
+			<tr>
+				<td><a href='{{urlFor('phonemes')}}/{{phoneme.id}}'>[
+						{{phoneme.letter}} ]</a></td>
+				<td><a href='{{urlFor('phonemes')}}/{{phoneme.id}}'>{{phoneme.examples}}</a></td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<div
+		class="col-xs-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+		<table id="consonants"
+			class="table table-striped table-hover table-bordered table-condensed table-responsive">
+			<caption>Consonantes</caption>
+			<thead>
+				<tr>
+					<th>Phoneme</th>
+					<th>Examples</th>
+				</tr>
+			</thead>
+			{% for phoneme in consonantes %}
+			<tr>
+				<td><a href='{{urlFor('phonemes')}}/{{phoneme.id}}'>[
+						{{phoneme.letter}} ]</a></td>
+				<td><a href='{{urlFor('phonemes')}}/{{phoneme.id}}'>{{phoneme.examples}}</a></td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</article>
+{% endif %} 
 
-	{% if id is null %}
-		<article>
-			<header>
-				<h1>Phonemes</h1>
-				<p>English words are made up by 40 phonemes. <a href="http://en.wikipedia.org/wiki/International_Phonetic_Alphabet">The International Phonetic Alphabet (IPA)</a> is a set of simbols used to represent those phonemes.
-			</p>
-			</header>
-			<figure id="imgExample"></figure>
-			<p> The IPA simbols are based primarily on the Latin alphabet. It was devised as a standardized representation of the sounds of oral language. The IPA is used by lexicographers, foreign language students and teachers, linguists, speech-language pathologists, singers, actors, constructed language creators, and translators.
-			</p>
-			<div class="col-xs-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
-				<table id="voewls" class="table table-striped table-hover table-bordered table-condensed table-responsive">
-					<caption>Vowels</caption>
-					<thead>
-        				<tr><th>Phoneme</th><th>Examples</th></tr>
-      				</thead>
-					<tr><td></td><td></td></tr>
-					{% for phoneme in vowels %}
-						<tr><td><a href='{{urlFor('phonemes')}}/{{phoneme.id}}'>[ {{phoneme.letter}} ]</a></td>
-							<td><a href='{{urlFor('phonemes')}}/{{phoneme.id}}'>{{phoneme.examples}}</a></td>
-						</tr>
-					{% endfor %}
-				</table>
-			</div>
-			<div class="col-xs-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
-				<table id="consonants" class="table table-striped table-hover table-bordered table-condensed table-responsive">
-					<caption>Consonantes</caption>
-					<thead>
-						<tr><th>Phoneme</th><th>Examples</th></tr>
-      				</thead>
-					{% for phoneme in consonantes %}
-						<tr><td><a href='{{urlFor('phonemes')}}/{{phoneme.id}}'>[ {{phoneme.letter}} ]</a></td>
-							<td><a href='{{urlFor('phonemes')}}/{{phoneme.id}}'>{{phoneme.examples}}</a></td>
-						</tr>
-					{% endfor %}
-				</table>
-			</div>
-		</article>
+{% if id is defined %}
+	<article>
+		<header>
+			<h1><a href='{{urlFor('phonemes')}}'>Phonemes</a>
+    {% if phonemeExample is defined %}
+    			<a href='{{urlFor('phonemes')}}/{{phonemeExample.id}}'> > [ {{phonemeExample.letter}} ]</a>
+    		</h1>
+    	</header>
+    		<section>				
+    		<h2>Examples: {{phonemeExample.examples}}</h2>
+    	    {% if phonemeExample.picture is not empty %}
+            	<p><img src='{{phonemeExample.picture}}' style='float: left;'class='thumbnail' height='128' width='128'>{{phonemeExample.description}}
+            	</p>
+    	    {% endif %}
+    		<p>{{phonemeExample.description}}</p>
+    		</section>
+    {% else %}
+			</h1>
+		</header>
+    {% endif %}  
+    {% if tips is null %}
+		<section id='tips'>
+    		{% for tip in tips %}
+    			<div
+    				class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    				<iframe class="embed-responsive-item" src='{{tip.link}}'> </iframe>
+    			</div>
+    		{% endfor %}
+    	</section>
 	{% endif %}
+	</article>
+{% endif %} 
 
-
-	{% if id is defined %}
-		<article>
-			<header>
-				<h1><a href='{{urlFor('phonemes')}}'>Phonemes</a>
-				{% if phonemeExample is defined %}
-					<a href='{{urlFor('phonemes')}}/{{phonemeExample.id}}'> > [ {{phonemeExample.letter}} ]</a>
-					</h1>
-					<div>
-						<h2>Examples: {{phonemeExample.examples}}</h2>
-						{% if phonemeExample.picture is not empty %}
-							<p><img src='{{phonemeExample.picture}}' style='float:left;' class='thumbnail' height='128' width='128'>{{phonemeExample.description}}
-							</p>
-						{% endif %}
-						<p>{{phonemeExample.description}}
-						</p>	
-					</div>
-				{% endif %}
-				{% if phonemeExample is null %}
-					</h1>
-				{% endif %}
-				<div>
-					<section id='tips'>
-						{% for tip in tips %}
-							<div class="embed-responsive embed-responsive-16by9 col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-								<iframe class="embed-responsive-item" src='{{tip.link}}'>
-								</iframe>
-							</div>
-						{% endfor %}
-					</section>
-				</div>
-			</header>
-		</article>
-	{% endif %}
 {% endblock content %}
