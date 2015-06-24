@@ -33,5 +33,4 @@ $(document).ready(function () {
 
 function share(socialMediaUrl){	
 	window.open(socialMediaUrl,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
-	return false;
 }
