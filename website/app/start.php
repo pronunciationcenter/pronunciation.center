@@ -44,6 +44,11 @@ $app->container->singleton('db', function () use($config) {
 /**
  * *Routes************************************************
  */
+$app->notFound(function () use ($app) {
+    $app->etag('notfound' + time() >> 20);
+    $app->expires('+1 week');
+    $app->render('404.twig');
+ });
 require_once __DIR__ . '/routers/routers.php';
 
 $app->run();

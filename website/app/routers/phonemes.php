@@ -50,19 +50,23 @@ $app->get('/phonemes/:id', function ($id) use($app) {
     ]);
     $phonemeExample = $phonemeExample->fetch(PDO::FETCH_ASSOC);
     
-    $tips = $app->db->prepare("
-				SELECT t.id, t.tittle, t.link, t.description 
-				FROM tips t 
+    if (!$phonemeExample){
+        $app->notFound();
+    }else{
+        $tips = $app->db->prepare("
+				SELECT t.id, t.tittle, t.link, t.description
+				FROM tips t
 				WHERE t.id_phoneme_example = :id
 		");
-    $tips->execute([
-        'id' => $id
-    ]);
-    $tips = $tips->fetchAll();
-    
-    $app->render('phonemes.twig', array(
-        'id' => $id,
-        'phonemeExample' => $phonemeExample,
-        'tips' => $tips
-    ));
+        $tips->execute([
+            'id' => $id
+        ]);
+        $tips = $tips->fetchAll();
+        
+        $app->render('phonemes.twig', array(
+            'id' => $id,
+            'phonemeExample' => $phonemeExample,
+            'tips' => $tips
+        ));
+    }
 });

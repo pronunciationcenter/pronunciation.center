@@ -1,0 +1,13 @@
+{% extends 'main.twig' %} 
+{% block title %}Page not found | Pronunciation Center{% endblock title %} 
+{% block content %}
+<section>
+	<header>
+		<h1>Page not found</h1>
+	</header>
+	<p>I am sorry, the page you are looking for could not be found.</p> 
+	<p>Please check the address bar to ensure your URL is spelled correctly.</p> 
+	<p>If all else fails, you can visit our home page at the link below.</p>
+	<p><a href='{{ urlFor('home') }}'>Visit the Home Page</a></p>
+</section>
+{% endblock content %}
