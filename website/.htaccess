@@ -1,7 +1,7 @@
 Options -Indexes
 RewriteEngine on
 RewriteCond %{REQUEST_URI} !(public|css|images|js)
-RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt|sitemap\.xml)$ [NC]
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt|sitemap\.xml|\.appcache)$ [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L,QSA]

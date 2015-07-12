@@ -1,0 +1,29 @@
+CACHE MANIFEST
+
+#version 1.0 7-12-2015
+
+CACHE:
+
+#images
+
+#internal HTML documents
+/home
+/phonemes
+
+#style sheets
+/public/css/custom.css
+
+#style sheet images
+/public/css/spritesheet.png
+
+#javascript files
+http://localhost/pronunciation.center/website/public/js/custom.js
+
+#external resources
+http://www.google-analytics.com/analytics.js
+https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css
+
+NETWORK:
+*
