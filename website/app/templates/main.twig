@@ -53,15 +53,28 @@
 						<li class="{{ currentUrl()==siteUrl('phonemes')?'active'}}"><a
 							href="{{urlFor('phonemes')}}">Phonemes</a></li>
 					</ul>
+					<form id="pronounce" class="navbar-form navbar-right">
+					<div class="form-group">
+					<div class="input-group">
+						<input id='phrase' type='text' class='form-control glyphicon' placeholder='Pronounce...' maxlength='600'>
+						<span class="input-group-btn">
+						<button id='playpause' type="button" class='btn btn-default glyphicon glyphicon-play'>
+						<button type="reset" class='btn btn-default glyphicon glyphicon-remove'>
+						</span>
+					</div>
+					</div>
+          			</form>
 				</div>
 				<!-- /.nav-collapse -->
 			</div>
 			<!-- /.container -->
 		</nav>
 	</header>
-
+	
 	<!-- Main Content-->
 	<main class="container main-container col-xs-12 col-sm-10 col-sm-offset-1">
+	<div id='errors' class='text-danger'></div>
+	</div>
 	    {% block content %}
 	    {% endblock content %} 
 	</main>
