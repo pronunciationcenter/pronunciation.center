@@ -56,7 +56,7 @@ $('#pronounce').submit(function (event){
 		if('speechSynthesis' in window) {
 			speak(phrase);
 		}else{
-			$('#errors').html('I am sorry, your browser does not sypport speech synthesis.');
+			$('#errors').html('I am sorry, your browser does not support speech synthesis.');
 		}		
 	}
 });
