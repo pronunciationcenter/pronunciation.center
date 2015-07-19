@@ -1,0 +1,22 @@
+{% extends 'main.twig' %}
+{% block title %}Text to Speak | Pronunciation Center{% endblock title %}
+{% block content %}
+<article>
+	<header>
+		<h1>Text to Speak</h1>
+	</header>
+	<form id="pronounceText" class="form-horizontal">
+		<textarea id="text" rows="15" class="form-control" placeholder="Type/paste your text here"></textarea>
+		<div class="form-group">
+    		<label for="speed" class="col-xs-2 control-label">Rate: </label>
+    		<div class="col-xs-7">
+    			<input id="rate" class="control-range" type="range" min=".25" max="2" step=".25" value="1">
+    		</div>
+			<output id="rateOutput" class="control-output col-xs-1">1x</output>
+		</div>
+    		<input id="speak" type="button" class="btn btn-success" value="Speak">
+    		<input id="stop" type="button" class="btn btn-danger" value="Stop">
+	</form>
+	<br>
+</article>
+{% endblock content %}

@@ -5,3 +5,4 @@ require_once 'settings.php';
 require_once 'suggestions.php';
 require_once 'tips.php';
 require_once 'articles.php';
+require_once 'speak.php';

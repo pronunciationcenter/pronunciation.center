@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" manifest="{{baseUrl()}}/manifest.appcache">
+<html lang="en">
 
 {% block head %}
 <head>
@@ -52,6 +52,8 @@
 							href="{{urlFor('home')}}">Home</a></li>
 						<li class="{{ currentUrl()==siteUrl('phonemes')?'active'}}"><a
 							href="{{urlFor('phonemes')}}">Phonemes</a></li>
+						<li class="{{ currentUrl()==siteUrl('text-to-speak')?'active'}}"><a
+							href="{{urlFor('speak')}}">Text to Speak</a></li>
 					</ul>
 					<form id="pronounce" class="navbar-form navbar-right">
 					<div class="form-group">
@@ -85,6 +87,7 @@
 			<ul class='nav nav-pills'>
 				<li><a href="{{urlFor('home')}}">Home</a></li>
 				<li><a href="{{urlFor('phonemes')}}">Phonemes</a></li>
+				<li><a href="{{urlFor('speak')}}">Text to Speak</a></li>
 			</ul>
 		</nav>
 		<br />
