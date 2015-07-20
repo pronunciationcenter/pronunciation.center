@@ -25,6 +25,8 @@ function share(socialMediaUrl){
 /*********************************************************************
  * Text to speech synthesis 
  ********************************************************************/
+var speed = 1.0;
+
 $('#rate').on('input',function(event){
 	event.preventDefault();
 	$('#rateOutput').val($(this).val()+'x');
@@ -45,10 +47,26 @@ $('#stop').click(function(event){
 $('#pronounceText').submit(function (event){
 	event.preventDefault();
 	var text =$('#text').val();
+	speed = parseFloat($('#rate').val());
 	if(text.trim()!=='' && speakCheckCompatibility()){
 		var phrases = text.replace(/\!/g,'.').replace(/\?/g,'.').split('.');
 		phrases.forEach(speakText);
 	}		
+});
+
+
+$('#playArticle').click(function (event){
+	event.preventDefault();
+	var text = $('#articleToSpeak').text();
+	if(speakCheckCompatibility()){
+		var phrases = text.replace(/\!/g,'.').replace(/\?/g,'.').split('.');
+		phrases.forEach(speakText);
+	}
+});
+
+$('#stopArticle').click(function (event){
+	event.preventDefault();
+	speechSynthesis.cancel();
 });
 
 function speakText(phrase){
@@ -56,7 +74,7 @@ function speakText(phrase){
 
 		var msg = new SpeechSynthesisUtterance(phrase);
 		msg.lang = 'en-US';
-		msg.rate = parseFloat($('#rate').val());
+		msg.rate = speed;
 
 		msg.onerror = function(event){
 			$('#errors').html('****I am sorry, it was not possible speak your text, please try again.****');
@@ -78,7 +96,7 @@ $('#pronounce').submit(function (event){
 	event.preventDefault();
 	var phrase = $('#phrase').val();
 	if(phrase.trim()!=='' && speakCheckCompatibility()){
-		var phrases = text.replace(/\!/g,'.').replace(/\?/g,'.').split('.');
+		var phrases = phrase.replace(/\!/g,'.').replace(/\?/g,'.').split('.');
 		phrases.forEach(speak);
 	}
 });

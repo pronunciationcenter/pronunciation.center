@@ -5,9 +5,12 @@
     <meta property="og:url" content="{{baseUrl()}}/{{urlFor('home')}}" />
 {% endblock title %} 
 {% block content %}
-<article>
+<article id="articleToSpeak">
 	<header>
-		<h1>Home</h1>
+		<h1>Home <span class="hidden">.</span>
+		<button id='playArticle' type="button" class='btn btn-default glyphicon glyphicon-play'></button>
+		<button id='stopArticle' type="button" class='btn btn-default glyphicon glyphicon-stop'></button>
+		</h1>
 		<p>Welcome to Pronunciation Center!</p>
 	</header>
 	<p>This is your portal to learn English Pronunciation.</p>
