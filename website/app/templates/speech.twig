@@ -1,9 +1,13 @@
 {% extends 'main.twig' %}
-{% block title %}Text to Speak | Pronunciation Center{% endblock title %}
+{% block title %}
+    <title>Text to Speech | Pronunciation Center</title>
+    <meta property="og:title" content="Text to Speech - Pronunciation Center" />
+    <meta property="og:url" content="{{baseUrl()}}/{{urlFor('speech')}}" />
+{% endblock title %}
 {% block content %}
 <article>
 	<header>
-		<h1>Text to Speak</h1>
+		<h1>Text to Speech</h1>
 	</header>
 	<form id="pronounceText" class="form-horizontal">
 		<textarea id="text" rows="15" class="form-control" placeholder="Type/paste your text here"></textarea>

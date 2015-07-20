@@ -1,5 +1,9 @@
 {% extends 'main.twig' %}
-{% block title %}Settings | Pronunciation Center{% endblock title %}
+{% block title %}
+    <title>Settings | Pronunciation Center</title>
+    <meta property="og:title" content="Settings - Pronunciation Center" />
+    <meta property="og:url" content="{{baseUrl()}}/{{urlFor('settings')}}" />
+{% endblock title %}
 {% block content %}
 	<article>
 		<header>

@@ -1,5 +1,9 @@
 {% extends 'main.twig' %} 
-{% block title %}English Phonemes | Pronunciation Center{% endblock title %} 
+{% block title %}
+    <title>English Phonemes | Pronunciation Center</title>
+    <meta property="og:title" content="English Phonemes  - Pronunciation Center" />
+    <meta property="og:url" content="{{baseUrl()}}/{{urlFor('phonemes')}}" />
+{% endblock title %} 
 {% block content %} 
 
 {% if id is null %}

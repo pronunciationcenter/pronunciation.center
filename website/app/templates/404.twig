@@ -1,5 +1,9 @@
 {% extends 'main.twig' %} 
-{% block title %}Page not found | Pronunciation Center{% endblock title %} 
+{% block title %}
+	<title>Page not found | Pronunciation Center</title>
+	<meta property="og:title" content="Home - Pronunciation Center" />
+    <meta property="og:url" content="{{baseUrl()}}/{{urlFor('home')}}" />
+{% endblock title %} 
 {% block content %}
 <section>
 	<header>

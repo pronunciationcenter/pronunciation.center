@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
 {% block head %}
 <head>
@@ -11,6 +11,10 @@
 	content="Learn: English; Pronunciation; English Pronunciation; Internation Phonetic Alphabet; Phonemes; Pronounce; Pronunciation Center is your portal for pronunciation">
 <meta name="keywords"
 	content="english,phonetic alphabet,pronunciation,how to pronounce,phonemes,phoneme,international phonetic alphabet,pronounce words,how to improve spoken english">
+	
+<meta property="og:image" content="{{baseUrl()}}/public/images/logo.png"/>
+<meta property="og:description" content="Pronunciation Center is your portal to learn Englih pronunciation." />
+
 <base href="{{baseUrl()}}" />
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
@@ -21,7 +25,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<title>{% block title %} {% endblock title %}</title>
+{% block title %} {% endblock title %}
 </head>
 {% endblock head %}
 
@@ -52,8 +56,8 @@
 							href="{{urlFor('home')}}">Home</a></li>
 						<li class="{{ currentUrl()==siteUrl('phonemes')?'active'}}"><a
 							href="{{urlFor('phonemes')}}">Phonemes</a></li>
-						<li class="{{ currentUrl()==siteUrl('text-to-speak')?'active'}}"><a
-							href="{{urlFor('speak')}}">Text to Speak</a></li>
+						<li class="{{ currentUrl()==siteUrl('text-to-speech')?'active'}}"><a
+							href="{{urlFor('speech')}}">Text to Speech</a></li>
 					</ul>
 					<form id="pronounce" class="navbar-form navbar-right">
 					<div class="form-group">
@@ -87,7 +91,7 @@
 			<ul class='nav nav-pills'>
 				<li><a href="{{urlFor('home')}}">Home</a></li>
 				<li><a href="{{urlFor('phonemes')}}">Phonemes</a></li>
-				<li><a href="{{urlFor('speak')}}">Text to Speak</a></li>
+				<li><a href="{{urlFor('speech')}}">Text to Speech</a></li>
 			</ul>
 		</nav>
 		<br />

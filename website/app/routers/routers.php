@@ -5,4 +5,8 @@ require_once 'settings.php';
 require_once 'suggestions.php';
 require_once 'tips.php';
 require_once 'articles.php';
-require_once 'speak.php';
+require_once 'speech.php';
+
+$app->get('/text-to-speak', function () use($app) {
+    $app->redirect('text-to-speech');
+});
