@@ -46,7 +46,7 @@ $('#pronounceText').submit(function (event){
 	event.preventDefault();
 	var text =$('#text').val();
 	if(text.trim()!=='' && speakCheckCompatibility()){
-		var phrases = text.replace('!','.').replace('?','.').split('.');
+		var phrases = text.replace(/\!/g,'.').replace(/\?/g,'.').split('.');
 		phrases.forEach(speakText);
 	}		
 });
@@ -78,7 +78,7 @@ $('#pronounce').submit(function (event){
 	event.preventDefault();
 	var phrase = $('#phrase').val();
 	if(phrase.trim()!=='' && speakCheckCompatibility()){
-		var phrases = phrase.replace('!','.').replace('?','.').split('.');
+		var phrases = text.replace(/\!/g,'.').replace(/\?/g,'.').split('.');
 		phrases.forEach(speak);
 	}
 });
