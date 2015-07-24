@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS `pronunciationDB2` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `pronunciationDB` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-use `pronunciationDB2`;
+use `pronunciationDB`;
 
 drop table IF EXISTS `tips`;
 drop table IF EXISTS `phoneme_examples`;
