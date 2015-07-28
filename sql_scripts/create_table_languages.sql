@@ -373,3 +373,10 @@ ALTER TABLE `tips` ADD INDEX(`id_phoneme_example`);
 ALTER TABLE `tips` ADD CONSTRAINT `FK_phoneme_examples` FOREIGN KEY (`id_phoneme_example`) REFERENCES `phoneme_examples`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 insert into tips(id_phoneme_example, tittle, link, description) values(5 ,'English: How to Pronounce the Schwa [ə] -- American Accent', 'https://www.youtube.com/embed/rM9NxK74JSE?rel=0', '');
 insert into tips(id_phoneme_example, tittle, link, description) values(5 ,'The /ə/ Sound', 'https://www.youtube.com/embed/RVvn6204I_Y?rel=0', '');
+
+use pronunciationDB;
+CREATE USER 'pronunciation'@'localhost' IDENTIFIED BY 'password';
+GRANT  select on pronunciationDB.* TO 'pronunciation'@'localhost';
+GRANT  insert on pronunciationDB.* TO 'pronunciation'@'localhost';
+GRANT  update on pronunciationDB.* TO 'pronunciation'@'localhost';
+GRANT  delete on pronunciationDB.* TO 'pronunciation'@'localhost';
